@@ -24,6 +24,3 @@ dist/
 # Файлы тестирования
 tests/
 database.db
-
-# Файлы логов
-/database/logging_files/*
