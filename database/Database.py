@@ -28,7 +28,7 @@ class DataBase():
     # __url_connect: str = f'mysql+aiomysql://{__db_user}:{__db_password}@{__db_host}/{__db_name}?charset=utf8mb4'
     
     # for sqlite3
-    __url_connect: str = 'sqlite+aiosqlite://tests/database.db'
+    __url_connect: str = 'sqlite+aiosqlite:///tests/database.db'
 
     __async_engine = create_async_engine(__url_connect)
     Session = async_sessionmaker(bind=__async_engine, class_=AsyncSession)
