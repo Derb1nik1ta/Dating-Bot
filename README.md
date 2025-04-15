@@ -51,7 +51,7 @@ REDIS_DB = '0'
 ```
 Все значения в скобках, кроме `REDIS_DB`, нужно изменить на свои.
 
-Если хотите использовать бота без **Редис**, раскомментируйте в файле `main.py` строку `storage = RedisStorage.from_url(url=settings.get_url_redis())` и закомментируйте строку `storage = None`.
+Если хотите использовать бота без **Редис**, раскомментируйте в файле `main.py` строку `storage = None` и закомментируйте строку `storage = RedisStorage.from_url(url=settings.get_url_redis())`.
 
 ## Лицензия
 **Данный проект распространяется под лицензией MIT License.**
