@@ -46,10 +46,10 @@ async def main() -> None:
     """Главная функция. Используется для настройки и запуска бота."""
     
     # with Redis
-    # storage = RedisStorage.from_url(url=settings.get_url_redis())
+    storage = RedisStorage.from_url(url=settings.get_url_redis())
 
     # without Redis
-    storage = None
+    # storage = None
 
     # create db
     await DataBase.create_db()

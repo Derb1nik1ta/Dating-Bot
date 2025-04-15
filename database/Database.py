@@ -20,15 +20,15 @@ class DataBase():
     """
 
     # for mysql
-    # __data_db: str = settings.get_data_db()
-    # __db_name: str = __data_db['DB_NAME']
-    # __db_user: str = __data_db['DB_USER']
-    # __db_password: str = __data_db['DB_PASSWORD']
-    # __db_host: str = __data_db['DB_HOST']
-    # __url_connect: str = f'mysql+aiomysql://{__db_user}:{__db_password}@{__db_host}/{__db_name}?charset=utf8mb4'
+    __data_db: str = settings.get_data_db()
+    __db_name: str = __data_db['DB_NAME']
+    __db_user: str = __data_db['DB_USER']
+    __db_password: str = __data_db['DB_PASSWORD']
+    __db_host: str = __data_db['DB_HOST']
+    __url_connect: str = f'mysql+aiomysql://{__db_user}:{__db_password}@{__db_host}/{__db_name}?charset=utf8mb4'
     
-    # for sqlite3
-    __url_connect: str = 'sqlite+aiosqlite:///tests/database.db'
+    # for test
+    # __url_connect: str = 'sqlite+aiosqlite:///tests/database.db'
 
     __async_engine = create_async_engine(__url_connect)
     Session = async_sessionmaker(bind=__async_engine, class_=AsyncSession)

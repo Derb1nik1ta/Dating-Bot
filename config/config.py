@@ -25,6 +25,7 @@ class Settings():
         :param __REDIS_PORT: Порт Редиса.
         :param __REDIS_DB: Порядок базы данных Редиса.
         """
+        
         load_dotenv()
         self.__BOT_TOKEN = os.getenv('BOT_TOKEN')
         self.ID_OWNER = os.getenv('ID_OWNER')
@@ -45,10 +46,12 @@ class Settings():
         
     def get_bot_token(self) -> str:
         """Возвращает токен бота."""
+
         return self.__BOT_TOKEN
     
     def get_data_db(self) -> dict:
         """Возвращает словарь с данными базы данных."""
+
         data_db: dict = {
             'DB_NAME': self.__DB_NAME,
             'DB_USER': self.__DB_USER,
@@ -59,6 +62,7 @@ class Settings():
 
     def get_url_redis(self) -> str:
         """Возваращает ссылку для подключения к Редис."""
+
         url: str = f'redis://{self.__REDIS_USER}:{self.__REDIS_PASSWORD}@{self.__REDIS_HOST}:{self.__REDIS_PORT}/{self.__REDIS_DB}'
         return url
 
